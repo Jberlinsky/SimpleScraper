@@ -14,6 +14,10 @@ Scraper.run:
 
   `Scraper.run(url)`
 
+To run a sample, one can execute from the command line:
+
+  `ruby ./lib/scraper.rb`
+
 ## Options
 
 ### File Extensions
@@ -39,11 +43,16 @@ in-memory hashes are all valid options.
 
 ## Potential Improvement
 
-While Anemone is multi-threaded, it would be useful for some classes of web sites to parallelize the process
+- While Anemone is multi-threaded, it would be useful for some classes of web sites to parallelize the process
 across multiple computers.
 
-Furthermore, it would be nice to move some of the regular expressions that are computed against the document into CSS selectors.
+- It would be nice to move some of the regular expressions that are computed against the document into CSS selectors.
 It might be faster (then again, might not -- benchmarking is required).
+
+- While Graphviz is great and all, it's not a particularly readable output. Perhaps a D3 visualization would be better.
+
+- We explicitly do not consider Amazon S3 links in this scraper, per our particular specifications. This should be
+parameterized.
 
 # Author
 

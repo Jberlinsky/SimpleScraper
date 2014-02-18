@@ -46,7 +46,7 @@ class Scraper
           # Add static assets to links
           safely { css_sources(page.doc).each { |link| page.links << URI(link) } }
           safely { script_sources(page.doc).each { |link| page.links << URI(link) } }
-          safely { image_sources(page.doc).each { |link| page.links << URI(link) } }# NOTE: Does not consider S3, per spec to not leave joingrouper.com domain
+          safely { image_sources(page.doc).each { |link| page.links << URI(link) } }
 
           sitemap.add_vertex(page.url.to_s)
           page.links.each do |other_vertex|
