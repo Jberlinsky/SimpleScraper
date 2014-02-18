@@ -84,4 +84,5 @@ class Scraper
   end
 end
 
-Scraper.run('https://www.joingrouper.com/', extension: 'jpg', exclusions: [/groupergrams/])
+# Yes, this is a Python design pattern...for temporary use while this isn't a proper gem
+Scraper.run('https://www.joingrouper.com/', extension: 'jpg', exclusions: [/groupergrams/]) if __FILE__ == $0
