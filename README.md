@@ -37,6 +37,14 @@ The underlying library utilized in the scraping process, Anemone, requires tempo
 scrape the domain that it is passed. By default, Redis will be used, although MongoDB, TokyoCabinet, PStore and 
 in-memory hashes are all valid options.
 
+## Potential Improvement
+
+While Anemone is multi-threaded, it would be useful for some classes of web sites to parallelize the process
+across multiple computers.
+
+Furthermore, it would be nice to move some of the regular expressions that are computed against the document into CSS selectors.
+It might be faster (then again, might not -- benchmarking is required).
+
 # Author
 
 Jason Berlinsky (jason@jasonberlinsky.com)
